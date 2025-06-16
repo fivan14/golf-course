@@ -37,25 +37,24 @@ const Login = () => {
 return (
     <>
     <h2 className="text-xl font-semibold mb-4">Login Form</h2>
-    <hr />
     <form onSubmit={handleSubmit}>
-        <label htmlFor='email'>Email</label>
+        <label htmlFor='email-field'>Email</label>
         <input 
         type='email'
         placeholder='Email'
-        name='email'
+        name='email-field'
         value={user.email}
         onChange={(e) => setUser({ ...user, email: e.target.value })}
-        className="border p-2 mb-3 block w-full"
+        className="border p-2 mb-3 block w-full focus:outline-none focus:ring-2 focus:ring-blue-300"
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password-field">Password</label>
         <input
         type='text'
         placeholder='Password'
-        name='password'
+        name='password-field'
         value={user.password}
         onChange={(e) => setUser({ ...user, password: e.target.value })}
-        className="border p-2 mb-2 block w-full"
+        className="border p-2 mb-3 block w-full focus:outline-none focus:ring-2 focus:ring-blue-300"
       />
       <div className='w-full flex justify-end'>
         <button type="submit" className="ml-auto bg-blue-500 text-white px-4 py-2 rounded">
